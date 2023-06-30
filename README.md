@@ -45,6 +45,14 @@ If set to true, an email notification is sent to the distribution group
 
 If set to true, shows useful debug information from the action execution.
 
+### `mandatory`
+
+If true, make the release mandatory for testers.
+
+### `markupReleaseNotes`
+
+If true, parse the release notes and add markdown formatting.
+
 ## Requirements
 
 This action is Docker-based. It means **it can only execute on runners with a Linux operating system**.

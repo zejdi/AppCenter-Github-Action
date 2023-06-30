@@ -1,6 +1,6 @@
-name: "App Center"
+name: "App Center Distribute Updated Notes"
 description: "GitHub Action that uploads artefacts for Visual Studio App Center"
-author: "Wojciech Zięba <@wzieba>"
+author: Zejdi Asani <@zejdi>"
 inputs:
   appName:
     description: "App name followed by username e.g. wzieba/Sample-App"
@@ -33,6 +33,15 @@ inputs:
     description: "If true, shows additional information from the action execution"
     required: false
     default: false
+  mandatory:
+    description: "If true, make the release mandatory for testers"
+    required: false
+    default: false
+  markupReleaseNotes:
+    description: "If true, parse the release notes and add markdown formatting"
+    required: false
+    default: false
+
 branding:
   color: "red"
   icon: "send"
