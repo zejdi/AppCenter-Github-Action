@@ -6,7 +6,7 @@ export IFS=";"
 params=()
 [ "${INPUT_NOTIFYTESTERS}" != true ] && params+=(--silent)
 [ "${INPUT_DEBUG}" == true ] && params+=(--debug)
-[ "${INPUT_MANDATORY}" == true] && params+=(--mandatory)
+[ "${INPUT_MANDATORY}" == true ] && params+=(--mandatory)
 if [ -n "${INPUT_RELEASENOTES}" ]; then
     RELEASE_NOTES=${INPUT_RELEASENOTES}
 elif [ $INPUT_GITRELEASENOTES ]; then
