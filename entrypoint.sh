@@ -25,7 +25,7 @@ for group in $INPUT_GROUP; do
     if ${isFirst} ; then
         isFirst=false
         if [ "${INPUT_MARKUPRELEASENOTES}" == true ]; then
-            echo "$RELEASE_NOTES" | sed 's/\.  */.\n/g' > /tmp/releasenotes
+            echo "$RELEASE_NOTES" | sed 's/|/\n/g' > /tmp/releasenotes
             appcenter distribute release --token "$INPUT_TOKEN" --app "$INPUT_APPNAME" --group $group --file "$INPUT_FILE" --release-notes-file /tmp/releasenotes "${params[@]}"
         else
             appcenter distribute release --token "$INPUT_TOKEN" --app "$INPUT_APPNAME" --group $group --file "$INPUT_FILE" --release-notes "$RELEASE_NOTES" "${params[@]}"
